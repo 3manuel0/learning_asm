@@ -6,8 +6,8 @@ text:
 global _start
 section .text
 _start:
-    mov rax, 2     
-    mov rdi, file 
+    mov rax, 2  ; open(...)   
+    mov rdi, file ; file
     mov rsi, 65    ; flags
     mov rdx, 0o666  ; mode 
     syscall      
