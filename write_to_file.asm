@@ -2,7 +2,7 @@ section .rodata
 file:
     db "test.txt", 0
 text:
-    db "anger builds", 0xa
+    db "anger builds", 10
 global _start
 section .text
 _start:
@@ -20,7 +20,7 @@ _start:
     syscall      
 
     ;close(fd)
-    mov rax, 3     
+    mov rax, rdi     
     syscall 
 
     ; exit(0)
