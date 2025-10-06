@@ -2,14 +2,14 @@ BITS 64
 ; 18446744073709551615
 section .data
     numb: dq 6744073709
-    errmsg: db "number exceeded the int limit", 0xa 
+    errmsg: db "number exceeded the 10 chracter limit", 0xa 
     msglen equ $ - errmsg
 section .bss
     buffer resb 11 
 section .text
 global _start
 _start: 
-    mov rax, [numb] ;
+    mov rax, [numb] ; rax = numb
     len:
         inc r8
         inc r9
